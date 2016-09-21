@@ -1,6 +1,10 @@
 source ENV['GEM_SOURCE'] || "https://rubygems.org"
-if ENV['RUBY_VER'] 
+if ENV['RUBY_VER']
   ruby ENV['RUBY_VER']
+end
+
+if RUBY_VERSION >= '1.8.7' and RUBY_VERSION < '2.0'
+  gem 'json', '~> 1.0'
 end
 
 group :test do
